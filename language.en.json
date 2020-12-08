@@ -1,0 +1,42 @@
+{
+  // Submit || Reset
+  "Save": "Save",
+  "SaveAs": "SaveAs",
+  "AddNew": "AddNew",
+  "Edit": "Edit",
+  "Delete": "Delete",
+  "Attach": "Attach",
+  "Upload": "Upload",
+  "Download": "Download",
+  "Submit": "Submit",
+  "Reset": "Reset",
+
+  // datetime
+  "Calendar": "Calendar",
+  "Year": "Year",
+  "Month": "Month",
+  "Day": "Day",
+  "Hour": "Hour",
+  "Minute": "Minute",
+  "Second": "Second",
+  "SundayShort": "Sun",
+  "MondayShort": "Mon",
+  "TuesdayShort": "Tue",
+  "WednesdayShort": "Wed",
+  "ThursdayShort": "Thu",
+  "FridayShort": "Fri",
+  "SaturdayShort": "Sat",
+  "Sunday": "Sunday",
+  "Monday": "Monday",
+  "Tuesday": "Tuesday",
+  "Wednesday": "Wednesday",
+  "Thursday": "Thursday",
+  "Friday": "Friday",
+  "Saturday": "Saturday",
+
+  // Attach file
+  "UploadSuccess": "Upload Success",
+  "UploadFail": "Upload Fail",
+  "FileIsNull": "File Is Null",
+  "FileIsMaxLenght": "File Is MaxLenght"
+}

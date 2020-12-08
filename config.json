@@ -1,0 +1,1709 @@
+{
+  "Https": 0,
+  "config": [
+    {
+      "IsMobile": 1,
+      "clientId": "HRMMOBILE", // fix
+      "functionListName": [
+        {
+          "FunctionName": "Login",
+          "StoreProceduceName": "SP_API__Users_Login",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserName",
+              "ParamType": "nvarchar",
+              "ParamLength": 30,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\":\"UserName\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"60\", \"InputValue\":\"REQUESTUserName\"}"
+            },
+            {
+              "ParamName": "Password",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\":\"Pwd\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"400\", \"InputValue\":\"REQUESTPassword\"}"
+            },
+            {
+              "ParamName": "DeviceID",
+              "ParamType": "nvarchar",
+              "ParamLength": 50,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\":\"DeviceID\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"100\", \"InputValue\":\"REQUESTDeviceID\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "CompanyCode",
+              "ParamType": "nvarchar",
+              "ParamLength": 30,
+              "ParamJson": "{\"ParamName\":\"CompanyCode\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"60\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "ParamJson": "{\"ParamName\":\"UserID\", \"ParamType\":\"0\", \"ParamInOut\":\"3\", \"ParamLength\":\"8\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "FullName",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\":\"FullName\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"200\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "Email",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\":\"Email\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"400\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "Mobile",
+              "ParamType": "nvarchar",
+              "ParamLength": 20,
+              "ParamJson": "{\"ParamName\":\"Mobile\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"40\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "Avatar",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\":\"Avatar\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"400\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "Token",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\":\"Token\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"200\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\":\"Message\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"600\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\":\"ResponseStatus\", \"ParamType\":\"8\", \"ParamInOut\":\"3\", \"ParamLength\":\"4\", \"InputValue\":\"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "LoginWithToken",
+          "StoreProceduceName": "SP_API__Users_LoginWithToken",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "CompanyCode",
+              "ParamType": "nvarchar",
+              "ParamLength": 30,
+              "IsHidden": 1,
+              "ParamJson": "{\"ParamName\":\"CompanyCode\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"60\", \"InputValue\":\"REQUESTCompanyCode\"}"
+            },
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 1,
+              "ParamJson": "{\"ParamName\":\"UserID\", \"ParamType\":\"0\", \"ParamInOut\":\"1\", \"ParamLength\":\"8\", \"InputValue\":\"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "DeviceID",
+              "ParamType": "nvarchar",
+              "ParamLength": 50,
+              "IsHidden": 1,
+              "ParamJson": "{\"ParamName\":\"DeviceID\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"100\", \"InputValue\":\"REQUESTDeviceID\"}"
+            },
+            {
+              "ParamName": "Token",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 1,
+              "ParamJson": "{\"ParamName\":\"Token\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"100\", \"InputValue\":\"REQUESTToken\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\":\"Message\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"600\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\":\"ResponseStatus\", \"ParamType\":\"8\", \"ParamInOut\":\"3\", \"ParamLength\":\"4\", \"InputValue\":\"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "LogOut",
+          "StoreProceduceName": "SP_API__Users_Logout",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "Token",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 1,
+              "ParamJson": "{\"ParamName\":\"Token\", \"ParamType\":\"12\", \"ParamInOut\":\"1\", \"ParamLength\":\"100\", \"InputValue\":\"REQUESTToken\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\":\"Message\", \"ParamType\":\"12\", \"ParamInOut\":\"3\", \"ParamLength\":\"600\", \"InputValue\":\"0\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\":\"ResponseStatus\", \"ParamType\":\"8\", \"ParamInOut\":\"3\", \"ParamLength\":\"4\", \"InputValue\":\"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "CheckHourOT",
+          "StoreProceduceName": "SP_API__CheckHourOT",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "TotalMonth",
+              "ParamType": "numeric",
+              "ParamLength": 6,
+              "ParamJson": "{\"ParamName\": \"TotalMonth\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"13\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "TotalYear",
+              "ParamType": "numeric",
+              "ParamLength": 6,
+              "ParamJson": "{\"ParamName\": \"TotalYear\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"13\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ListRegisterLeave",
+          "StoreProceduceName": "SP_API__Get_ListRegisterLeave",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Status",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Status\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTStatus\"}"
+            },
+            {
+              "ParamName": "ManagerStatus",
+              "ParamType": "smallint",
+              "ParamLength": 1,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ManagerStatus\", \"ParamType\": \"16\", \"ParamInOut\": \"1\", \"ParamLength\": \"2\", \"InputValue\": \"REQUESTManagerStatus\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "RegisterLeave",
+          "StoreProceduceName": "SP_API__RegisterLeave",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "LeaveFrom",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"LeaveFrom\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTLeaveFrom\"}"
+            },
+            {
+              "ParamName": "LeaveTo",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"LeaveTo\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTLeaveTo\"}"
+            },
+            {
+              "ParamName": "FromHour",
+              "ParamType": "nvarchar",
+              "ParamLength": 10,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"FromHour\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"20\", \"InputValue\": \"REQUESTFromHour\"}"
+            },
+            {
+              "ParamName": "ToHour",
+              "ParamType": "nvarchar",
+              "ParamLength": 10,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ToHour\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"20\", \"InputValue\": \"REQUESTToHour\"}"
+            },
+            {
+              "ParamName": "Remark",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Remark\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTRemark\"}"
+            },
+            {
+              "ParamName": "SymbolId",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"SymbolId\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTSymbolId\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 0,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"-1\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"8\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Profile",
+          "StoreProceduceName": "SP_API__Get_Profile",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "FullName",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\": \"FullName\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"400\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "UserName",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\": \"UserName\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"200\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Mobile",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\": \"Mobile\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"200\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Address",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Address\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Email",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\": \"Email\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"400\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Avatar",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\": \"Avatar\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"400\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "DofB",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\": \"DofB\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"400\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Nationality",
+              "ParamType": "nvarchar",
+              "ParamLength": 50,
+              "ParamJson": "{\"ParamName\": \"Nationality\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"100\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Nation",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\": \"Nation\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"200\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Title",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "ParamJson": "{\"ParamName\": \"Title\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"200\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "IDCard",
+              "ParamType": "nvarchar",
+              "ParamLength": 20,
+              "ParamJson": "{\"ParamName\": \"IDCard\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"40\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Gender",
+              "ParamType": "nvarchar",
+              "ParamLength": 5,
+              "ParamJson": "{\"ParamName\": \"Gender\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"10\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"400\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Notification",
+          "StoreProceduceName": "SP_API__GetNotification",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"1000\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ApproveRegisterLeave",
+          "StoreProceduceName": "SP_API__ApproveRegisterLeave",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "RegisterID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"RegisterID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTRegisterID\"}"
+            },
+            {
+              "ParamName": "Comment",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Comment\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTComment\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ApproveRegisterOT",
+          "StoreProceduceName": "SP_API__ApproveRegisterOT",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "RegisterID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"RegisterID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTRegisterID\"}"
+            },
+            {
+              "ParamName": "Comment",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Comment\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTComment\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "CancelRegisterLeave",
+          "StoreProceduceName": "SP_API__CancelRegisterLeave",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "RegisterID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"RegisterID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTRegisterID\"}"
+            },
+            {
+              "ParamName": "Comment",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Comment\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTComment\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "CancelRegisterOT",
+          "StoreProceduceName": "SP_API__CancelRegisterOT",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "RegisterID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"RegisterID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTRegisterID\"}"
+            },
+            {
+              "ParamName": "Comment",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Comment\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTComment\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "CheckDayLeaveRest",
+          "StoreProceduceName": "SP_API__CheckDayLeaveRest",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "TotalHave",
+              "ParamType": "numeric",
+              "ParamLength": 4,
+              "ParamJson": "{\"ParamName\": \"TotalHave\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"9\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Status",
+              "ParamType": "smallint",
+              "ParamLength": 1,
+              "ParamJson": "{\"ParamName\": \"Status\", \"ParamType\": \"16\", \"ParamInOut\": \"3\", \"ParamLength\": \"2\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Used",
+              "ParamType": "numeric",
+              "ParamLength": 4,
+              "ParamJson": "{\"ParamName\": \"Used\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"9\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Contract",
+          "StoreProceduceName": "SP_API__Get_Contract",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ListEmployee",
+          "StoreProceduceName": "SP_API__Get_Employee",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "RowCount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"RowCount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Family",
+          "StoreProceduceName": "SP_API__Get_Family",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ListRegisterLeaveManager",
+          "StoreProceduceName": "SP_API__Get_ListRegisterLeaveManager",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Status",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Status\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTStatus\"}"
+            },
+            {
+              "ParamName": "Type",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Type\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTType\"}"
+            },
+            {
+              "ParamName": "FromDate",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"FromDate\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTFromDate\"}"
+            },
+            {
+              "ParamName": "ToDate",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ToDate\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTToDate\"}"
+            },
+            {
+              "ParamName": "KeyEmployee",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"KeyEmployee\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTKeyEmployee\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ListRegisterOT",
+          "StoreProceduceName": "SP_API__Get_ListRegisterOT",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Status",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Status\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTStatus\"}"
+            },
+            {
+              "ParamName": "ManagerStatus",
+              "ParamType": "smallint",
+              "ParamLength": 1,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ManagerStatus\", \"ParamType\": \"16\", \"ParamInOut\": \"1\", \"ParamLength\": \"2\", \"InputValue\": \"REQUESTManagerStatus\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "ListRegisterOTManager",
+          "StoreProceduceName": "SP_API__Get_ListRegisterOTManager",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "Status",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Status\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTStatus\"}"
+            },
+            {
+              "ParamName": "ManagerStatus",
+              "ParamType": "bit",
+              "ParamLength": 0,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ManagerStatus\", \"ParamType\": \"2\", \"ParamInOut\": \"1\", \"ParamLength\": \"1\", \"InputValue\": \"REQUESTManagerStatus\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Period",
+          "StoreProceduceName": "SP_API__Get_Period",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "Year",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Year\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTYear\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "TrainOut",
+          "StoreProceduceName": "SP_API__Get_TrainOut",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "Working",
+          "StoreProceduceName": "SP_API__Get_Working",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "WorkingOld",
+          "StoreProceduceName": "SP_API__Get_WorkingOld",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "EmployeeID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"EmployeeID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTEmployeeID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "RegisterOT",
+          "StoreProceduceName": "SP_API__RegisterOT",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "WorkingDay",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"WorkingDay\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTWorkingDay\"}"
+            },
+            {
+              "ParamName": "FromHour",
+              "ParamType": "nvarchar",
+              "ParamLength": 10,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"FromHour\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"20\", \"InputValue\": \"REQUESTFromHour\"}"
+            },
+            {
+              "ParamName": "ToHour",
+              "ParamType": "nvarchar",
+              "ParamLength": 10,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ToHour\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"20\", \"InputValue\": \"REQUESTToHour\"}"
+            },
+            {
+              "ParamName": "TotalHour",
+              "ParamType": "float",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"TotalHour\", \"ParamType\": \"6\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTTotalHour\"}"
+            },
+            {
+              "ParamName": "IsCompensatory",
+              "ParamType": "smallint",
+              "ParamLength": 1,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"IsCompensatory\", \"ParamType\": \"16\", \"ParamInOut\": \"1\", \"ParamLength\": \"2\", \"InputValue\": \"REQUESTIsCompensatory\"}"
+            },
+            {
+              "ParamName": "IsRegister",
+              "ParamType": "smallint",
+              "ParamLength": 1,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"IsRegister\", \"ParamType\": \"16\", \"ParamInOut\": \"1\", \"ParamLength\": \"2\", \"InputValue\": \"REQUESTIsRegister\"}"
+            },
+            {
+              "ParamName": "Remark",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Remark\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"1000\", \"InputValue\": \"REQUESTRemark\"}"
+            },
+            {
+              "ParamName": "WorkingID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"WorkingID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTWorkingID\"}"
+            },
+            {
+              "ParamName": "ValIn",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ValIn\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTValIn\"}"
+            },
+            {
+              "ParamName": "ValOut",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ValOut\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTValOut\"}"
+            },
+            {
+              "ParamName": "ApproveID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ApproveID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTApproveID\"}"
+            },
+            {
+              "ParamName": "ApproveDateTime",
+              "ParamType": "datetime",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"ApproveDateTime\", \"ParamType\": \"4\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTApproveDateTime\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 500,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"1000\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"0\", \"ParamInOut\": \"3\", \"ParamLength\": \"8\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "SeenNotificationStatus",
+          "StoreProceduceName": "SP_API__SeenNotificationStatus",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "NotificationID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"NotificationID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTNotificationID\"}"
+            },
+            {
+              "ParamName": "TypeNotifaction",
+              "ParamType": "nvarchar",
+              "ParamLength": 50,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"TypeNotifaction\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"100\", \"InputValue\": \"REQUESTTypeNotifaction\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "TypeCitysList",
+          "StoreProceduceName": "SP_API__Type_Citys_List",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "Keyword",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Keyword\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTKeyword\"}"
+            },
+            {
+              "ParamName": "OT_NationID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"OT_NationID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTOT_NationID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "TypeLeave",
+          "StoreProceduceName": "SP_API__Type_Leave",
+          "IsParamInputList": 0,
+          "ParamIn": [],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "TypeWardsList",
+          "StoreProceduceName": "SP_API__Type_Wards_List",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "Keyword",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Keyword\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTKeyword\"}"
+            },
+            {
+              "ParamName": "OT_DistrictID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"OT_DistrictID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTOT_DistrictID\"}"
+            },
+            {
+              "ParamName": "Page",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Page\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPage\"}"
+            },
+            {
+              "ParamName": "PageSize",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"PageSize\", \"ParamType\": \"8\", \"ParamInOut\": \"1\", \"ParamLength\": \"4\", \"InputValue\": \"REQUESTPageSize\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            },
+            {
+              "ParamName": "Rowcount",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"Rowcount\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        },
+        {
+          "FunctionName": "UpdateProfile",
+          "StoreProceduceName": "SP_API__UpdateProfile",
+          "IsParamInputList": 0,
+          "ParamIn": [
+            {
+              "ParamName": "UserID",
+              "ParamType": "bigint",
+              "ParamLength": 4,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserID\", \"ParamType\": \"0\", \"ParamInOut\": \"1\", \"ParamLength\": \"8\", \"InputValue\": \"REQUESTUserID\"}"
+            },
+            {
+              "ParamName": "FullName",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"FullName\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"400\", \"InputValue\": \"REQUESTFullName\"}"
+            },
+            {
+              "ParamName": "UserName",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"UserName\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTUserName\"}"
+            },
+            {
+              "ParamName": "Mobile",
+              "ParamType": "nvarchar",
+              "ParamLength": 11,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Mobile\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"22\", \"InputValue\": \"REQUESTMobile\"}"
+            },
+            {
+              "ParamName": "Address",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Address\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"600\", \"InputValue\": \"REQUESTAddress\"}"
+            },
+            {
+              "ParamName": "Email",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Email\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"400\", \"InputValue\": \"REQUESTEmail\"}"
+            },
+            {
+              "ParamName": "Avatar",
+              "ParamType": "nvarchar",
+              "ParamLength": 200,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Avatar\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"400\", \"InputValue\": \"REQUESTAvatar\"}"
+            },
+            {
+              "ParamName": "DofB",
+              "ParamType": "nvarchar",
+              "ParamLength": 20,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"DofB\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"40\", \"InputValue\": \"REQUESTDofB\"}"
+            },
+            {
+              "ParamName": "Nationality",
+              "ParamType": "nvarchar",
+              "ParamLength": 50,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Nationality\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"100\", \"InputValue\": \"REQUESTNationality\"}"
+            },
+            {
+              "ParamName": "Nation",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Nation\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTNation\"}"
+            },
+            {
+              "ParamName": "Title",
+              "ParamType": "nvarchar",
+              "ParamLength": 100,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Title\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"200\", \"InputValue\": \"REQUESTTitle\"}"
+            },
+            {
+              "ParamName": "IDCard",
+              "ParamType": "nvarchar",
+              "ParamLength": 20,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"IDCard\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"40\", \"InputValue\": \"REQUESTIDCard\"}"
+            },
+            {
+              "ParamName": "Gender",
+              "ParamType": "nvarchar",
+              "ParamLength": 5,
+              "IsHidden": 0,
+              "ParamJson": "{\"ParamName\": \"Gender\", \"ParamType\": \"12\", \"ParamInOut\": \"1\", \"ParamLength\": \"10\", \"InputValue\": \"REQUESTGender\"}"
+            }
+          ],
+          "ParamOut": [
+            {
+              "ParamName": "Message",
+              "ParamType": "nvarchar",
+              "ParamLength": 300,
+              "ParamJson": "{\"ParamName\": \"Message\", \"ParamType\": \"12\", \"ParamInOut\": \"3\", \"ParamLength\": \"600\", \"InputValue\": \"\"}"
+            },
+            {
+              "ParamName": "ResponseStatus",
+              "ParamType": "int",
+              "ParamLength": 2,
+              "ParamJson": "{\"ParamName\": \"ResponseStatus\", \"ParamType\": \"8\", \"ParamInOut\": \"3\", \"ParamLength\": \"4\", \"InputValue\": \"0\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "username": "AdminWebNuoc",
+      "password": "twpXf9s0HjfJUx6XAUN+JQ==",
+      "companyCode": "BOS",
+      "clientId": "KVPWEB",
+      "clientListIP": [
+        {
+          "IPAddress": "::1"
+        },
+        {
+          "IPAddress": "127.0.0.1"
+        }
+      ],
+      "functionListName": [
+        {
+          "FunctionName": "getAPIParameter",
+          "StoreProceduceName": "SP_CONFIG__ExecuteStore",
+          "IsParamInputList": 0
+        }
+      ]
+    }
+  ],
+  "LanguageDefault": "vi"
+}

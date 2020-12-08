@@ -1,0 +1,15 @@
+﻿@using Utils
+<!DOCTYPE html>
+<html>
+<head>
+    @Html.Raw(UIDef.UIHeaderPage(ViewData["PageTitle"].ToString()))
+</head>
+@Html.Raw(UIDef.UIBodyTagOpen((string)ViewData["Secure"], (bool)ViewData["IsPageLogin"]))
+<div></div>
+@RenderBody()
+@Html.Raw(UIDef.UIFooter((bool)ViewData["IsPageLogin"], (string)ViewData["ListShortcut"]))
+
+@Html.Raw(UIDef.UIBodyTagClose((string)ViewData["iframe"], (string)ViewData["txtClose"]))
+</html>
+
+<!--((bool)ViewData["IsPageLogin"]? UIDef.UIHeaderLoginPage(ViewData["PageTitle"].ToString()): UIDef.UIHeaderPage(ViewData["PageTitle"].ToString()))-->

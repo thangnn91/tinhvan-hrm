@@ -1,0 +1,57 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+q:before,q:after { content:''; }
+abbr,acronym { border:0; }
+
+body { background: #fff; }
+/* optional Container STYLES */
+/* .chart { height: 600px; margin: 5px; width: 900px; } */
+.Treant > .node {margin: 0;}
+.node-name {font-weight: bold;margin-top: 10px;display: inline-block;width: 100%;}
+.treenhansu {
+    padding: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    /* border: 1px solid #000; */
+    width: 250px;
+    font-family: Tahoma;
+    font-size: 12px;
+}
+.treenhansu img {
+    margin-right:  10px;
+    width: 100%;
+}
+.treenhansu .card .card-body .card-text {
+    padding: 0px 20px 20px 20px;
+}
+.Treant .collapsed .collapse-switch {
+    background: #fff;
+}
+/* "\f066"; */
+.Treant .collapse-switch:before {
+    content: "\f0b2";
+    font-family: FontAwesome;
+}
+.Treant .collapsed .collapse-switch:before  {
+    font-family: FontAwesome;
+    content: "\f0b2";
+}
+.Treant .collapse-switch {
+    border: none !important;
+    top: auto;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    color: #ccc !important;
+    text-align: center;
+}
+
+.node.treenhansu .card {
+    margin-bottom: 0;
+}
